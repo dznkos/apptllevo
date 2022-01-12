@@ -14,26 +14,28 @@ class HomeScreen extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: [
-            Padding(padding: EdgeInsets.only(left: 10.w, top: 10.h),
+            Padding(padding: EdgeInsets.only(left: 10, top: 10),
             child: Row(
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(5),
                   child: Container(
-                    padding: EdgeInsets.all(14.w),
-                    height: 80.h,
-                    width: 80.h,
+                    padding: EdgeInsets.all(14),
                     color: Color(0xFFE1E1E1),
                     child: SvgPicture.asset("assets/icons/drawer/user.svg",
                     color: Color(0xFF707070),
+                    fit: BoxFit.cover,
+                    height: 40,
                     )
                     ),
                   ),
-                Container(
-                  margin: EdgeInsets.only(left: 15.w),
-                  child: Text('¿Deseas acceder a los\nmejores descuentos?',
-                  style: GoogleFonts.barlow(
-                    textStyle: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600, color: Colors.black ) ,),
+                Expanded(                  
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text('¿Deseas acceder a los\nmejores descuentos?',
+                    style: GoogleFonts.barlow(
+                      textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black ) ,),
+                    ),
                   )
                 )
 
@@ -41,26 +43,27 @@ class HomeScreen extends StatelessWidget {
             ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 10.w, top: 10.h, right: 10.w),
+              padding: EdgeInsets.only(left: 10, top: 10, right: 10),
               child: MaterialButton(
+                height: 50,
                 onPressed: (){
                   print('button');
                 },
                 color: Color(0xFF3483FA),
                 child: Text('Iniciar Sesion', 
-                style: TextStyle( color: Colors.white) ,
+                style: TextStyle(fontSize: 16, color: Colors.white) ,
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 10.w, right: 10.w),
+              padding: EdgeInsets.only(left: 10, right: 10),
               child:Divider(                    
                     color: Color(0xFFCCCCCC),
                   )
             ),
 
             Container(
-              padding: EdgeInsets.only(left: 8.w),
+              padding: EdgeInsets.only(left: 8),
               child: Column(
                 children: [
                   ListTile(
@@ -68,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                     leading: SvgPicture.asset("assets/icons/drawer/Grupo920.svg",),
                     title: Text('Inicio',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w400)),
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w400)),
                     ),
                   ),
                   ListTile(
@@ -77,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                     color: Color(0xFF000000),),
                     title: Text('Buscar',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000),)),
                     ),
                   ),
@@ -87,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                     color: Color(0xFF000000),),
                     title: Text('Mis Compras',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000),)),
                     ),
                   ),
@@ -97,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                     color: Color(0xFF000000),),
                     title: Text('Favoritos',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   ),
@@ -107,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     title: Text('Descuentos',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   ),
@@ -117,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     title: Text('Historial',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   ),
@@ -127,12 +130,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                     title: Text('Mi cuenta',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 10.w),
+                    padding: EdgeInsets.only(left: 10,),
                     child:Divider(                    
                           color: Color(0xFFCCCCCC),
                         )
@@ -143,12 +146,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                     title: Text('Vender',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 10.w),
+                    padding: EdgeInsets.only(left: 10,),
                     child:Divider(                    
                           color: Color(0xFFCCCCCC),
                         )
@@ -159,12 +162,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                     title: Text('Tiendas Oficiales',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 10.w),
+                    padding: EdgeInsets.only(left: 10,),
                     child:Divider(                    
                           color: Color(0xFFCCCCCC),
                         )
@@ -175,7 +178,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     title: Text('Ayuda',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   ),
@@ -185,7 +188,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     title: Text('Acerca De',
                     style: GoogleFonts.barlow(
-                      textStyle: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.w500,
+                      textStyle: TextStyle(fontSize: 19, fontWeight: FontWeight.w500,
                       color: Color(0xFF000000))),
                     ),
                   )

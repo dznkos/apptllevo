@@ -21,14 +21,14 @@ class MyApp extends StatelessWidget {
           primaryColor: Color(0xFF4C2EAC),
           scaffoldBackgroundColor: Color(0xFFEEEEEE),
           primarySwatch: Colors.blue,
-          textTheme: TextTheme(
+          textTheme: TextTheme(            
             headline1: TextStyle(
-              fontSize: 14.sp,
+              fontSize: 14,
               color: Color(0xFF707070),
               fontWeight: FontWeight.w400
             ),
             headline2: GoogleFonts.barlow( textStyle: TextStyle(
-              fontSize: 14.sp,
+              fontSize: 14,
               color: Color(0xFF2A2A2A),
               fontWeight: FontWeight.w400)
             ),
@@ -87,7 +87,6 @@ class MyApp extends StatelessWidget {
             color: Color(0xFFFFFFFF),
             fontWeight: FontWeight.w400)
             ),
-
 
           )
         ),
